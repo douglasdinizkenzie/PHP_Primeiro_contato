@@ -91,3 +91,71 @@ echo "<br>";
 $arrayFormatadoEOrdenado = array_values($meuArray); 
 // ^ DESSA FORMA O ARRAY SERÁ NOVAMENTE ORDENADO CORRETAMENTE.
 print_r($arrayFormatadoEOrdenado);
+
+echo "<br>";
+
+
+
+
+
+
+// -------------------------------------------------------------------------------------------------
+                                        // TESTE DE CLASSES (POO) NO PHP
+
+
+
+require_once "./Model/Person.php";
+// ^ DESSA MANEIRA SE IMPORTA UM ARQUIVO
+
+$uglyPerson = new Person("2000", "Douglas", "Doug");
+echo print_r($uglyPerson);
+// ^ INSTANCIANDO UMA CLASSE, OU CRIANDO UMA NOVA PESSOA
+
+echo '<br>';
+
+$prettyPerson = new Person ("2000", "Letícia", "Cabeção");
+echo print_r($prettyPerson);
+// ^ CRIANDO MAIS UMA PESSOA USANDO A MESMA CLASSE ANTERIORMENTE
+echo '<br>';
+
+//
+echo $prettyPerson->returnName();
+echo "<br>";
+echo $uglyPerson->returnName();
+// ^ RETURN NAME É UM MÉTODO CRIADO NA CLASSE PARA QUE MOSTRE O NOME DO OBJETO INSTANCIADO
+
+echo "<br>"; 
+
+echo $prettyPerson->changeNickName('Cabeção PATH');
+// ^ MÉTODO NA CLASSE QUE IRÁ MUDAR O NICKNAME DO OBJETO
+echo "<br>";
+echo print_r($prettyPerson);
+
+echo '<br>'; 
+
+echo $prettyPerson->returnAge();
+// ^ MÉTODO DENTRO DA CLASSE QUE RETORNA A IDADE, FOI USADO A CLASSE DO PHP "DATETIME"
+
+echo "<br>";
+
+
+
+// ---------------------------------------------------------- TESTANTO HERANÇA
+
+require_once './Model/Alien.php';
+
+$alien1 = new Alien("1995", "Bilu", "Bilutetéia", "Agressivo");
+// ^ CRIANDO UM NOVO OBJETO ATRAVÉS DA CLASSE HERDADA
+
+echo print_r($alien1);
+
+echo "<br>";
+
+echo $alien1->returnTypeOfAlien();
+// ^ MÉTODO QUE EXISTE NA CLASSE FILHA
+
+echo "<br>";
+
+echo $alien1->nickname;
+
+echo "<br>";
