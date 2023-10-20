@@ -159,3 +159,27 @@ echo "<br>";
 echo $alien1->nickname;
 
 echo "<br>";
+
+echo $alien1->returnName();
+// ^ returnName é uma função que existe na classe pai, mesmo assim, na classe filha conseguimos ter acesso
+
+echo '<br>';
+
+
+
+// --------------------------------- TESTANDO CLASSES ABSTRATAS 
+
+require_once "./Model/Carro.php";
+
+
+$carro1 = new Carro('vermelho', 'fiat', '2000');
+
+echo print_r($carro1);
+
+echo "<br>";
+
+
+
+
+
+
